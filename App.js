@@ -1,9 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, Text as RNText, SafeAreaView } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { useFonts } from "expo-font";
 import { customFontLoad } from "./app/themes/typography";
-import CreativeScriptIcon from "./app/common/Icon/CreativeScriptIcon";
-import Text from "./app/common/CreativeScriptText";
+import MainNavigatore from "./app/app";
 
 // SplashScreen.preventAutoHideAsync();
 export default function App() {
@@ -12,24 +11,21 @@ export default function App() {
     ...customFontLoad,
   });
 
+  
   if (!fontsLoaded) {
     return null;
   }
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar style="auto" />
-
-      <Text text="HELLO WORLD" preset="bold" />
-      <CreativeScriptIcon name="Facebook" />
-    </SafeAreaView>
+    <View style={styles.container}>
+      <StatusBar hidden />
+      <MainNavigatore />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#FFF",
   },
 });

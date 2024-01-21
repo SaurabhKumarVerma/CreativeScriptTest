@@ -20,7 +20,7 @@ export const customFontLoad = {
   LexendThin,
 };
 
-const font = {
+export const font = {
   lexendFont: {
     bold: "LexendBold",
     extraBold: "LexendExtraBold",

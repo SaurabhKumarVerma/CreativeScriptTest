@@ -46,7 +46,7 @@ const Text = (props: TextProps) => {
 };
 
 const sizeStyles = {
-  xl: { fontSize: 24, lineHeight: 34 } satisfies TextStyle,
+  xl: { fontSize: 24, lineHeight: 34, fontWeight: "600" } satisfies TextStyle,
   lg: { fontSize: 20, lineHeight: 32 } satisfies TextStyle,
   md: { fontSize: 18, lineHeight: 26 } satisfies TextStyle,
   sm: { fontSize: 16, lineHeight: 24 } satisfies TextStyle,
@@ -91,6 +91,12 @@ const presets = {
     sizeStyles.sm,
     fontWeightStyles.thin,
   ] as StyleProp<TextStyle>,
+
+  medium: [
+    baseStyle,
+    sizeStyles.md,
+    fontWeightStyles.medium
+  ]
 };
 
 export default Text;
